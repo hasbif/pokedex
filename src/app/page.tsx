@@ -9,7 +9,7 @@ import { ListProvider } from "./provider";
 
 export default function Home() {
   return (
-    <ApolloProvider client={client}>
+    <ApolloProvider client={client()}>
       <ListProvider>
         <Header />
         <Stack width='100%' p='8'>

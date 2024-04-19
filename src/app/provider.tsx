@@ -20,7 +20,9 @@ type PokemonTypes = {
   name: string
 }
 
-interface StoreProps { }
+interface StoreProps {
+  mockData?: PokemonItem[]
+ }
 
 interface ProviderProps extends StoreProps {
   children?: React.ReactNode;
@@ -164,6 +166,7 @@ const Store = (props: StoreProps) => {
     fetchPolicy: 'cache-and-network'
   })
 
+  console.log('context', props.mockData)
 
   return {
     states: {
@@ -176,7 +179,7 @@ const Store = (props: StoreProps) => {
       pageSize
     },
     data: {
-      list: data?.pokemon_v2_pokemon as PokemonItem[] || [],
+      list: props.mockData || data?.pokemon_v2_pokemon as PokemonItem[] || [],
       loading,
       typeList: typeList?.pokemon_v2_type as PokemonTypes[] || []
     },

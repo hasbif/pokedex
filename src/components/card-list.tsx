@@ -11,6 +11,7 @@ export default function CardList() {
   const list = data.list
   const router = useRouter()
   const capitalize = (s:string) => (s ? s[0].toUpperCase() + s.slice(1) : "")
+  console.log('data,',data)
   return (
       <Grid gridTemplateColumns={'repeat(auto-fit, minmax(270px, 1fr))'} width='100%' gap='20px'>
         {list.map(pok => <Card key={pok.name} size='sm' maxW='20em'

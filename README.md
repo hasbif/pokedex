@@ -2,6 +2,22 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+To run local
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+To run test
+```bash
+npm test
+# or
+yarn test
+```
+
+
 First, run the development server:
 
 ```bash

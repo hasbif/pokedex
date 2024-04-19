@@ -2,6 +2,7 @@ import DetailCard, { Pokemon } from "@/components/detail-card"
 import HeaderSimple from "@/components/header-simple"
 import {HStack} from "@chakra-ui/react"
 import React from "react"
+import fetch from "cross-fetch"
 
 type PageProps = {
   params: {

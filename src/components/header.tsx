@@ -55,7 +55,7 @@ export default function Header() {
       </Grid>
 
       {!!states.compare.length && <HStack gap={'4'} justifyContent='flex-end'>
-        <Stack gap={'4'}>
+        <Stack gap={'4'} data-testid='compareButtons'>
           <Button size={'sm'} onClick={() => router.push(`/compare/${states.compare.map(pok => pok.id).join('-')}`)}>
             Compare
           </Button>

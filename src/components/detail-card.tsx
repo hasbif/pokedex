@@ -46,11 +46,12 @@ const DetailCard = (props: {pokemon: Pokemon}) => {
                 src={pokemon.pokemon_v2_pokemonsprites[0].sprites || 'https://img.pokemondb.net/sprites/heartgold-soulsilver/back-normal/psyduck.png'}
                 alt={pokemon.name}
                 loading="lazy"
+                role='detailImage'
               />
             </Box>
           </Stack>
 
-          <Stack padding='4' gap='4' background={'white'}>
+          <Stack padding='4' gap='4' background={'white'} role='detailName'>
             <HStack justifyContent={'space-between'}>
             <Heading>
               {capitalize(pokemon.name)}
@@ -65,9 +66,7 @@ const DetailCard = (props: {pokemon: Pokemon}) => {
               </Tag>)}
             </HStack>
             <Card>
-
-
-              <Tabs isFitted variant='enclosed'>
+              <Tabs isFitted variant='enclosed' role='detailInfo'>
                 <TabList mb='1em'>
                   <Tab>Basic</Tab>
                   <Tab>Stats</Tab>
